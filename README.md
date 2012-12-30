@@ -1,0 +1,4 @@
+ios-fontawesome
+===============
+
+NSString+FontAwesome
