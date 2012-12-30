@@ -2,7 +2,8 @@ Use Font Awesome in iOS.
 ===================
 
 Font awesome is an iconic font. Read more about it on http://fortawesome.github.com/Font-Awesome/
-This category helps using this great iconic font on iOS.
+
+This category brings this great iconic font on iOS.
 
 Usage
 --------------------
