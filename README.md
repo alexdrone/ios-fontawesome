@@ -1,4 +1,4 @@
-Use Font Awesome in iOS.
+FontAwesome+iOS
 ===================
 
 Font awesome is an iconic font. Read more about it on http://fortawesome.github.com/Font-Awesome/
