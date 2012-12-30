@@ -1,13 +1,32 @@
 //
 //  NSString+FontAwesome.m
 //
-//  Created by Alex Usbergo on 12/30/12.
+//  Copyright (c) 2012 Alex Usbergo. All rights reserved.
 //
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //
 
 #import "NSString+FontAwesome.h"
 
 @implementation NSString (FontAwesome)
+
+#pragma mark - public
 
 /* Returns the correct enum for a font-awesome icon.
  * The list of identifiers can be found here:
@@ -45,25 +64,25 @@
     return [self fontAwesomeIconStringForEnum:[self fontAwesomeEnumForIconIdentifier:identifier]];
 }
 
+#pragma mark - private
+
 /* Transform a hyphen-case string into a camel case one */
 - (NSString*)toCamelCase
 {
-    NSMutableString *output = [NSMutableString string];
-    BOOL makeNextCharacterUpperCase = NO;
-    for (NSInteger i = 0; i < self.length; i++) {
-        
-        unichar c = [self characterAtIndex:i];
-        
-        if (c == '-') {
-            makeNextCharacterUpperCase = YES;
-        } else if (makeNextCharacterUpperCase) {
-            [output appendString:[[NSString stringWithCharacters:&c length:1] uppercaseString]];
-            makeNextCharacterUpperCase = NO;
-        } else {
-            [output appendFormat:@"%C", c];
-        }
+	NSMutableString *output = [NSMutableString string];
+	BOOL makeNextCharacterUpperCase = NO;
+	for (NSInteger i = 0; i < self.length; i++) {        
+		unichar c = [self characterAtIndex:i];
+		if (c == '-') {
+		    makeNextCharacterUpperCase = YES;
+		} else if (makeNextCharacterUpperCase) {
+		    [output appendString:[[NSString stringWithCharacters:&c length:1] uppercaseString]];
+		    makeNextCharacterUpperCase = NO;
+		} else {
+		    [output appendFormat:@"%C", c];
+		}
     }
-    return output;
+	return output;
 }
 
 #pragma mark - data initialization
