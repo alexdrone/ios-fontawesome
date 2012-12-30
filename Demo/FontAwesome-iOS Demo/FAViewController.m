@@ -27,6 +27,7 @@
     
     for (NSUInteger i = 0; i < kStarsNumber; i++) {
         UIButton *star = [UIButton buttonWithType:UIButtonTypeCustom];
+        star.tag = i;
         star.frame = CGRectMake(60.f+(i *40.f), 200.f, 40.f, 40.f);
         star.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:35];
         star.titleLabel.shadowOffset = CGSizeMake(0, -1);
@@ -41,9 +42,8 @@
 
 - (void)didSelectStar:(id)sender
 {
-    NSUInteger index = [self.stars indexOfObject:sender];
     for (NSUInteger i = 0; i < self.stars.count; i++)
-        [self.stars[i] setSelected:(i <= index)];
+        [self.stars[i] setSelected:(i <= [sender tag])];
 }
 
 @end
