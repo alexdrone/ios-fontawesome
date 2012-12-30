@@ -29,4 +29,4 @@ For further information have a look to the small demo project!
 More
 -------------------
 
-This project uses the FontAwesome fix made by leberwurstsaft, that you can find here https://github.com/leberwurstsaft/FontAwesome-for-iOS
+This project uses the FontAwesome fix made by leberwurstsaf that you can find at https://github.com/leberwurstsaft/FontAwesome-for-iOS
