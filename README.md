@@ -24,3 +24,9 @@ or you can reference them by using the class identifiers listed here http://fort
 	
 That's it!
 For further information have a look to the small demo project!
+
+
+More
+-------------------
+
+This project uses the FontAwesome fix made by leberwurstsaft, that you can find here https://github.com/leberwurstsaft/FontAwesome-for-iOS
