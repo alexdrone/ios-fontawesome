@@ -1,0 +1,49 @@
+//
+//  FAViewController.m
+//  FontAwesome-iOS Demo
+//
+//  Created by Alex Usbergo on 12/30/12.
+//  Copyright (c) 2012 Alex Usbergo. All rights reserved.
+//
+
+#import "FAViewController.h"
+#import "NSString+FontAwesome.h"
+
+@interface FAViewController ()
+@property (nonatomic, strong) NSMutableArray *stars;
+@end
+
+@implementation FAViewController
+
+#define kStarsNumber 5
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.stars = [[NSMutableArray alloc] init];
+    
+    for (NSUInteger i = 0; i < kStarsNumber; i++) {
+        UIButton *star = [UIButton buttonWithType:UIButtonTypeCustom];
+        star.frame = CGRectMake(60.f+(i *40.f), 200.f, 40.f, 40.f);
+        star.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:35];
+        star.titleLabel.shadowOffset = CGSizeMake(0, -1);
+        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAIconStarEmpty] forState:UIControlStateNormal];
+        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAIconStar] forState:UIControlStateSelected];
+        [star setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        [star addTarget:self action:@selector(didSelectStar:) forControlEvents:UIControlEventTouchDown];
+        [self.view addSubview:star];
+        self.stars[i] = star;
+    }
+}
+
+- (void)didSelectStar:(id)sender
+{
+    NSUInteger index = [self.stars indexOfObject:sender];
+    for (NSUInteger i = 0; i < self.stars.count; i++)
+        [self.stars[i] setSelected:(i <= index)];
+}
+
+@end

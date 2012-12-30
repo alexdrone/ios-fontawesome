@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16255F391690AF29004B8154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16255F381690AF29004B8154 /* UIKit.framework */; };
+		16255F3B1690AF29004B8154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16255F3A1690AF29004B8154 /* Foundation.framework */; };
+		16255F3D1690AF29004B8154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16255F3C1690AF29004B8154 /* CoreGraphics.framework */; };
+		16255F431690AF29004B8154 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16255F411690AF29004B8154 /* InfoPlist.strings */; };
+		16255F451690AF29004B8154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F441690AF29004B8154 /* main.m */; };
+		16255F491690AF29004B8154 /* FAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F481690AF29004B8154 /* FAAppDelegate.m */; };
+		16255F4B1690AF29004B8154 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4A1690AF29004B8154 /* Default.png */; };
+		16255F4D1690AF29004B8154 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4C1690AF29004B8154 /* Default@2x.png */; };
+		16255F4F1690AF29004B8154 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4E1690AF29004B8154 /* Default-568h@2x.png */; };
+		16255F521690AF2A004B8154 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F511690AF2A004B8154 /* FAViewController.m */; };
+		16255F601690AFAE004B8154 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16255F5F1690AFAE004B8154 /* FontAwesome.ttf */; };
+		16255F631690B09F004B8154 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F621690B086004B8154 /* NSString+FontAwesome.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16255F341690AF29004B8154 /* FontAwesome-iOS Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FontAwesome-iOS Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16255F381690AF29004B8154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16255F3A1690AF29004B8154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		16255F3C1690AF29004B8154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16255F401690AF29004B8154 /* FontAwesome-iOS Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FontAwesome-iOS Demo-Info.plist"; sourceTree = "<group>"; };
+		16255F421690AF29004B8154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		16255F441690AF29004B8154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16255F461690AF29004B8154 /* FontAwesome-iOS Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FontAwesome-iOS Demo-Prefix.pch"; sourceTree = "<group>"; };
+		16255F471690AF29004B8154 /* FAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAAppDelegate.h; sourceTree = "<group>"; };
+		16255F481690AF29004B8154 /* FAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAAppDelegate.m; sourceTree = "<group>"; };
+		16255F4A1690AF29004B8154 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		16255F4C1690AF29004B8154 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		16255F4E1690AF29004B8154 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		16255F501690AF2A004B8154 /* FAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAViewController.h; sourceTree = "<group>"; };
+		16255F511690AF2A004B8154 /* FAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
+		16255F5F1690AFAE004B8154 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		16255F611690B086004B8154 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "../NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		16255F621690B086004B8154 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "../NSString+FontAwesome.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16255F311690AF29004B8154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16255F391690AF29004B8154 /* UIKit.framework in Frameworks */,
+				16255F3B1690AF29004B8154 /* Foundation.framework in Frameworks */,
+				16255F3D1690AF29004B8154 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16255F291690AF29004B8154 = {
+			isa = PBXGroup;
+			children = (
+				16255F611690B086004B8154 /* NSString+FontAwesome.h */,
+				16255F621690B086004B8154 /* NSString+FontAwesome.m */,
+				16255F5E1690AFAE004B8154 /* Resources */,
+				16255F3E1690AF29004B8154 /* FontAwesome-iOS Demo */,
+				16255F371690AF29004B8154 /* Frameworks */,
+				16255F351690AF29004B8154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16255F351690AF29004B8154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16255F341690AF29004B8154 /* FontAwesome-iOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16255F371690AF29004B8154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16255F381690AF29004B8154 /* UIKit.framework */,
+				16255F3A1690AF29004B8154 /* Foundation.framework */,
+				16255F3C1690AF29004B8154 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16255F3E1690AF29004B8154 /* FontAwesome-iOS Demo */ = {
+			isa = PBXGroup;
+			children = (
+				16255F471690AF29004B8154 /* FAAppDelegate.h */,
+				16255F481690AF29004B8154 /* FAAppDelegate.m */,
+				16255F501690AF2A004B8154 /* FAViewController.h */,
+				16255F511690AF2A004B8154 /* FAViewController.m */,
+				16255F3F1690AF29004B8154 /* Supporting Files */,
+			);
+			path = "FontAwesome-iOS Demo";
+			sourceTree = "<group>";
+		};
+		16255F3F1690AF29004B8154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16255F411690AF29004B8154 /* InfoPlist.strings */,
+				16255F441690AF29004B8154 /* main.m */,
+				16255F401690AF29004B8154 /* FontAwesome-iOS Demo-Info.plist */,
+				16255F461690AF29004B8154 /* FontAwesome-iOS Demo-Prefix.pch */,
+				16255F4A1690AF29004B8154 /* Default.png */,
+				16255F4C1690AF29004B8154 /* Default@2x.png */,
+				16255F4E1690AF29004B8154 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16255F5E1690AFAE004B8154 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16255F5F1690AFAE004B8154 /* FontAwesome.ttf */,
+			);
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16255F331690AF29004B8154 /* FontAwesome-iOS Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16255F5B1690AF2A004B8154 /* Build configuration list for PBXNativeTarget "FontAwesome-iOS Demo" */;
+			buildPhases = (
+				16255F301690AF29004B8154 /* Sources */,
+				16255F311690AF29004B8154 /* Frameworks */,
+				16255F321690AF29004B8154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FontAwesome-iOS Demo";
+			productName = "FontAwesome-iOS Demo";
+			productReference = 16255F341690AF29004B8154 /* FontAwesome-iOS Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16255F2B1690AF29004B8154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FA;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Alex Usbergo";
+			};
+			buildConfigurationList = 16255F2E1690AF29004B8154 /* Build configuration list for PBXProject "FontAwesome-iOS Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 16255F291690AF29004B8154;
+			productRefGroup = 16255F351690AF29004B8154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16255F331690AF29004B8154 /* FontAwesome-iOS Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16255F321690AF29004B8154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16255F431690AF29004B8154 /* InfoPlist.strings in Resources */,
+				16255F4B1690AF29004B8154 /* Default.png in Resources */,
+				16255F4D1690AF29004B8154 /* Default@2x.png in Resources */,
+				16255F4F1690AF29004B8154 /* Default-568h@2x.png in Resources */,
+				16255F601690AFAE004B8154 /* FontAwesome.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16255F301690AF29004B8154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16255F451690AF29004B8154 /* main.m in Sources */,
+				16255F491690AF29004B8154 /* FAAppDelegate.m in Sources */,
+				16255F521690AF2A004B8154 /* FAViewController.m in Sources */,
+				16255F631690B09F004B8154 /* NSString+FontAwesome.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		16255F411690AF29004B8154 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16255F421690AF29004B8154 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16255F591690AF2A004B8154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16255F5A1690AF2A004B8154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16255F5C1690AF2A004B8154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontAwesome-iOS Demo/FontAwesome-iOS Demo-Prefix.pch";
+				INFOPLIST_FILE = "FontAwesome-iOS Demo/FontAwesome-iOS Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		16255F5D1690AF2A004B8154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontAwesome-iOS Demo/FontAwesome-iOS Demo-Prefix.pch";
+				INFOPLIST_FILE = "FontAwesome-iOS Demo/FontAwesome-iOS Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16255F2E1690AF29004B8154 /* Build configuration list for PBXProject "FontAwesome-iOS Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16255F591690AF2A004B8154 /* Debug */,
+				16255F5A1690AF2A004B8154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16255F5B1690AF2A004B8154 /* Build configuration list for PBXNativeTarget "FontAwesome-iOS Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16255F5C1690AF2A004B8154 /* Debug */,
+				16255F5D1690AF2A004B8154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16255F2B1690AF29004B8154 /* Project object */;
+}
