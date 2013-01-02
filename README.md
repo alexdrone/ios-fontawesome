@@ -20,7 +20,7 @@ You can now use enums for all the different iconic characters
 	
 or you can reference them by using the class identifiers listed here http://fortawesome.github.com/Font-Awesome/#all-icons
 
-	label.text = [NSString fontAwesomeEnumForIconIdentifier:@"icon-github"];
+	label.text = [NSString fontAwesomeIconStringForIconIdentifier:@"icon-github"];
 	
 That's it!
 For further information have a look to the small demo project!
