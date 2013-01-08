@@ -236,15 +236,7 @@ typedef NS_ENUM(NSInteger, FAIcon) {
     FAIconSitemap,
     FAIconUmbrella,
     FAIconPaste,
-    FAIconUserMd,
-	FAIconStethoscope,
-	FAIconBuilding,
-	FAIconHospital,
-	FAIconAmbulance,
-	FAIconMedkit,
-	FAIconHSign,
-	FAIconPlusSignAlt,
-	FAIconSpinner
+    FAIconUserMd
 };
 
 @interface NSString (FontAwesome)
