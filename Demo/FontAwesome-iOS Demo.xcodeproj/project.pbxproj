@@ -17,7 +17,6 @@
 		16255F4D1690AF29004B8154 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4C1690AF29004B8154 /* Default@2x.png */; };
 		16255F4F1690AF29004B8154 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4E1690AF29004B8154 /* Default-568h@2x.png */; };
 		16255F521690AF2A004B8154 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F511690AF2A004B8154 /* FAViewController.m */; };
-		16255F601690AFAE004B8154 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16255F5F1690AFAE004B8154 /* FontAwesome.ttf */; };
 		16255F631690B09F004B8154 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F621690B086004B8154 /* NSString+FontAwesome.m */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +36,9 @@
 		16255F4E1690AF29004B8154 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		16255F501690AF2A004B8154 /* FAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAViewController.h; sourceTree = "<group>"; };
 		16255F511690AF2A004B8154 /* FAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
-		16255F5F1690AFAE004B8154 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		16255F611690B086004B8154 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "../NSString+FontAwesome.h"; sourceTree = "<group>"; };
 		16255F621690B086004B8154 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "../NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		903286AA169CB9ED0025C750 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "../Font-Awesome/font/FontAwesome.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +114,7 @@
 		16255F5E1690AFAE004B8154 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				16255F5F1690AFAE004B8154 /* FontAwesome.ttf */,
+				903286AA169CB9ED0025C750 /* FontAwesome.otf */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -177,7 +176,6 @@
 				16255F4B1690AF29004B8154 /* Default.png in Resources */,
 				16255F4D1690AF29004B8154 /* Default@2x.png in Resources */,
 				16255F4F1690AF29004B8154 /* Default-568h@2x.png in Resources */,
-				16255F601690AFAE004B8154 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +300,7 @@
 				16255F5D1690AF2A004B8154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
