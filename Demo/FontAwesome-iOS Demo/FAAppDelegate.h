@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class FATableViewController;
-
 @interface FAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) FATableViewController *tableViewController;
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

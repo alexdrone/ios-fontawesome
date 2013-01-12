@@ -21,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = NSLocalizedString(@"Stars", nil);
 
     self.view.backgroundColor = [UIColor whiteColor];
     self.stars = [[NSMutableArray alloc] init];

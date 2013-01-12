@@ -20,6 +20,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        self.title = NSLocalizedString(@"Icon List", nil);
         // Custom initialization
     }
     return self;
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
 	
 	[self.tableView registerClass:[FATableViewCell class] forCellReuseIdentifier:@"Cell"];
 
@@ -61,7 +63,8 @@
     
 	cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForIconIdentifier:[[self enumArray] objectAtIndex:indexPath.row]], [[self enumArray] objectAtIndex:indexPath.row]];
 	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForIconIdentifier:[[self enumArray] objectAtIndex:indexPath.row]], [[self enumArray] objectAtIndex:indexPath.row]]];
-	[attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"fontawesome-webfont" size:18] range:NSMakeRange(0, 1)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(1, [cell.textLabel.text length] - 1)];
+	[attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:kFontAwesomeFamilyName size:22] range:NSMakeRange(0, 1)];
 	[cell.textLabel setAttributedText:attributedString];
     
     return cell;
@@ -108,23 +111,16 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Copy of the enumDictionary
 
 - (NSArray*)enumArray
 {
-	static NSDictionary *enumDictionary;
-	if (nil == enumDictionary) {
+    static NSArray *enumArray;
+	if (nil == enumArray) {
 		NSMutableDictionary *tmp = [[NSMutableDictionary alloc] init];
 		tmp[@"icon-glass"] = @(FAIconGlass);
 		tmp[@"icon-music"] = @(FAIconMusic);
@@ -374,9 +370,9 @@
 		tmp[@"icon-github-alt"] = @(FAIconGithubAlt);
 		tmp[@"icon-close-alt"] = @(FAIconFolderCloseAlt);
 		tmp[@"icon-folder-open-alt"] = @(FAIconFolderOpenAlt);
-		enumDictionary = tmp;
+        enumArray = [[tmp allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	}
-    return [[enumDictionary allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    return enumArray;
 }
 
 @end
