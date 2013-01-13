@@ -1,72 +1,126 @@
 //
-//  NSString+FontAwesome.m
+//  FATableViewController.m
+//  FontAwesome-iOS Demo
 //
-//  Copyright (c) 2012 Alex Usbergo. All rights reserved.
-//
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  Created by Rune Madsen on 2013-01-09.
+//  Copyright (c) 2013 Rune Madsen. All rights reserved.
 //
 
+#import "FATableViewController.h"
 #import "NSString+FontAwesome.h"
+#import "FATableViewCell.h"
 
-@implementation NSString (FontAwesome)
+@interface FATableViewController ()
 
-#pragma mark - public
+@end
 
-/* Returns the correct enum for a font-awesome icon.
- * The list of identifiers can be found here:
- * http://fortawesome.github.com/Font-awesome/#all-icons */
-+ (FAIcon)fontAwesomeEnumForIconIdentifier:(NSString*)string
+@implementation FATableViewController
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    NSDictionary *enums = [self enumDictionary];
-    return [enums[string] integerValue];
-}
-
-/* Returns the font-awesome character associated to the
- * icon enum passed as argument */
-+ (NSString*)fontAwesomeIconStringForEnum:(FAIcon)value
-{
-    return [self fontAwesomeIcons][value];
-}
-
-/* Returns the font-awesome character associated to the font-awesome
- * identifier.
- * http://fortawesome.github.com/Font-awesome/#all-icons */
-+ (NSString*)fontAwesomeIconStringForIconIdentifier:(NSString*)identifier
-{
-    return [self fontAwesomeIconStringForEnum:[self fontAwesomeEnumForIconIdentifier:identifier]];
-}
-
-#pragma mark - data initialization
-
-+ (NSArray*)fontAwesomeIcons
-{
-    static NSArray *fontAwesomeIcons;
-    if (nil == fontAwesomeIcons) {
-        fontAwesomeIcons = @[@"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @"", @""];
+    self = [super initWithStyle:style];
+    if (self) {
+        self.title = NSLocalizedString(@"Icon List", nil);
+        // Custom initialization
     }
-    return fontAwesomeIcons;
+    return self;
 }
 
-+ (NSDictionary*)enumDictionary
+- (void)viewDidLoad
 {
-	static NSDictionary *enumDictionary;
-	if (nil == enumDictionary) {
+    [super viewDidLoad];
+    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
+	
+	[self.tableView registerClass:[FATableViewCell class] forCellReuseIdentifier:@"Cell"];
+
+	[self.navigationItem setTitle:[NSString stringWithFormat:@"Font Awesome (%d icons)", [[self enumArray] count]]];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [[self enumArray] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    FATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+	cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForIconIdentifier:[[self enumArray] objectAtIndex:indexPath.row]], [[self enumArray] objectAtIndex:indexPath.row]];
+	NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@", [NSString fontAwesomeIconStringForIconIdentifier:[[self enumArray] objectAtIndex:indexPath.row]], [[self enumArray] objectAtIndex:indexPath.row]]];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16] range:NSMakeRange(1, [cell.textLabel.text length] - 1)];
+	[attributedString addAttribute:NSFontAttributeName value:[UIFont fontWithName:kFontAwesomeFamilyName size:22] range:NSMakeRange(0, 1)];
+	[cell.textLabel setAttributedText:attributedString];
+    
+    return cell;
+}
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }   
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Copy of the enumDictionary
+
+- (NSArray*)enumArray
+{
+    static NSArray *enumArray;
+	if (nil == enumArray) {
 		NSMutableDictionary *tmp = [[NSMutableDictionary alloc] init];
 		tmp[@"icon-glass"] = @(FAIconGlass);
 		tmp[@"icon-music"] = @(FAIconMusic);
@@ -316,10 +370,9 @@
 		tmp[@"icon-github-alt"] = @(FAIconGithubAlt);
 		tmp[@"icon-close-alt"] = @(FAIconFolderCloseAlt);
 		tmp[@"icon-folder-open-alt"] = @(FAIconFolderOpenAlt);
-		enumDictionary = tmp;
+        enumArray = [[tmp allKeys] sortedArrayUsingSelector:@selector(compare:)];
 	}
-    
-    return enumDictionary;
+    return enumArray;
 }
 
 @end

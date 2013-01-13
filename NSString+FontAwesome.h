@@ -236,7 +236,45 @@ typedef NS_ENUM(NSInteger, FAIcon) {
     FAIconSitemap,
     FAIconUmbrella,
     FAIconPaste,
-    FAIconUserMd
+    FAIconUserMd,
+	FAIconStethoscope,
+	FAIconBuilding,
+	FAIconHospital,
+	FAIconAmbulance,
+	FAIconMedkit,
+	FAIconHSign,
+	FAIconPlusSignAlt,
+	FAIconSpinner,
+	FAIconCloudDownload,
+	FAIconCloudUpload,
+	FAIconLightbulb,
+	FAIconExchange,
+	FAIconBellAlt,
+	FAIconFileAlt,
+	FAIconBeer,
+	FAIconCoffee,
+	FAIconFood,
+	FAIconFighterJet,
+	FAIconAngleLeft,
+	FAIconAngleRight,
+	FAIconAngleUp,
+	FAIconAngleDown,
+	FAIconDoubleAngleLeft,
+	FAIconDoubleAngleRight,
+	FAIconDoubleAngleUp,
+	FAIconDoubleAngleDown,
+	FAIconCircleBlank,
+	FAIconCircle,
+	FAIconDesktop,
+	FAIconLaptop,
+	FAIconTablet,
+	FAIconMobilePhone,
+	FAIconQuoteLeft,
+	FAIconQuoteRight,
+	FAIconReply,
+	FAIconGithubAlt,
+	FAIconFolderCloseAlt,
+	FAIconFolderOpenAlt
 };
 
 @interface NSString (FontAwesome)
@@ -254,6 +292,5 @@ typedef NS_ENUM(NSInteger, FAIcon) {
  * identifier.
  * http://fortawesome.github.com/Font-Awesome/#all-icons */
 + (NSString*)fontAwesomeIconStringForIconIdentifier:(NSString*)identifier;
-
 
 @end

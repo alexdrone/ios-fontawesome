@@ -7,16 +7,20 @@
 //
 
 #import "FAAppDelegate.h"
-
 #import "FAViewController.h"
+#import "FATableViewController.h"
 
 @implementation FAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[FAViewController alloc] init];
-    self.window.rootViewController = self.viewController;
+    self.tabBarController = [[UITabBarController alloc] init];
+    FATableViewController *tableViewController = [[FATableViewController alloc] init];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    FAViewController *viewController = [[FAViewController alloc] init];
+    [self.tabBarController setViewControllers:@[viewController, navigationController]];
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
