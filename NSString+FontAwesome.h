@@ -274,7 +274,8 @@ typedef NS_ENUM(NSInteger, FAIcon) {
 	FAIconReply,
 	FAIconGithubAlt,
 	FAIconFolderCloseAlt,
-	FAIconFolderOpenAlt
+	FAIconFolderOpenAlt,
+    FAIconSuitcase,
 };
 
 @interface NSString (FontAwesome)
