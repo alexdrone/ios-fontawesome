@@ -19,7 +19,7 @@
     FATableViewController *tableViewController = [[FATableViewController alloc] init];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
     FAViewController *viewController = [[FAViewController alloc] init];
-    [self.tabBarController setViewControllers:@[viewController, navigationController]];
+    [self.tabBarController setViewControllers:@[navigationController, viewController]];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
