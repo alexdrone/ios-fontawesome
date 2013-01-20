@@ -18,6 +18,8 @@
 		16255F4F1690AF29004B8154 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16255F4E1690AF29004B8154 /* Default-568h@2x.png */; };
 		16255F521690AF2A004B8154 /* FAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F511690AF2A004B8154 /* FAViewController.m */; };
 		16255F631690B09F004B8154 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 16255F621690B086004B8154 /* NSString+FontAwesome.m */; };
+		16E3960116A7407B00BA7FAF /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E3960016A7407B00BA7FAF /* UIFont+FontAwesome.m */; };
+		16E3960716A7441000BA7FAF /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E3960616A7441000BA7FAF /* FAImageView.m */; };
 		903F614416A0F82A00028D21 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 903F614316A0F82A00028D21 /* FontAwesome.ttf */; };
 		90F843A7169DC3A900C28AA3 /* FATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F843A6169DC3A900C28AA3 /* FATableViewController.m */; };
 		90F843AB169DC46600C28AA3 /* FATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F843AA169DC46600C28AA3 /* FATableViewCell.m */; };
@@ -41,6 +43,10 @@
 		16255F511690AF2A004B8154 /* FAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAViewController.m; sourceTree = "<group>"; };
 		16255F611690B086004B8154 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "../NSString+FontAwesome.h"; sourceTree = "<group>"; };
 		16255F621690B086004B8154 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "../NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		16E395FF16A7407B00BA7FAF /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+FontAwesome.h"; path = "../UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		16E3960016A7407B00BA7FAF /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FontAwesome.m"; path = "../UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		16E3960516A7441000BA7FAF /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAImageView.h; path = ../FAImageView.h; sourceTree = "<group>"; };
+		16E3960616A7441000BA7FAF /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAImageView.m; path = ../FAImageView.m; sourceTree = "<group>"; };
 		903F614316A0F82A00028D21 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		90F843A5169DC3A900C28AA3 /* FATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FATableViewController.h; sourceTree = "<group>"; };
 		90F843A6169DC3A900C28AA3 /* FATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FATableViewController.m; sourceTree = "<group>"; };
@@ -65,6 +71,10 @@
 		16255F291690AF29004B8154 = {
 			isa = PBXGroup;
 			children = (
+				16E3960516A7441000BA7FAF /* FAImageView.h */,
+				16E3960616A7441000BA7FAF /* FAImageView.m */,
+				16E395FF16A7407B00BA7FAF /* UIFont+FontAwesome.h */,
+				16E3960016A7407B00BA7FAF /* UIFont+FontAwesome.m */,
 				16255F611690B086004B8154 /* NSString+FontAwesome.h */,
 				16255F621690B086004B8154 /* NSString+FontAwesome.m */,
 				903F614216A0F81A00028D21 /* Resources */,
@@ -204,6 +214,8 @@
 				16255F631690B09F004B8154 /* NSString+FontAwesome.m in Sources */,
 				90F843A7169DC3A900C28AA3 /* FATableViewController.m in Sources */,
 				90F843AB169DC46600C28AA3 /* FATableViewCell.m in Sources */,
+				16E3960116A7407B00BA7FAF /* UIFont+FontAwesome.m in Sources */,
+				16E3960716A7441000BA7FAF /* FAImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

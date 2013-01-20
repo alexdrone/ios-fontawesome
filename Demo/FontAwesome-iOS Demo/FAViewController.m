@@ -8,6 +8,7 @@
 
 #import "FAViewController.h"
 #import "NSString+FontAwesome.h"
+#import "FAImageView.h"
 
 @interface FAViewController ()
 @property (nonatomic, strong) NSMutableArray *stars;
@@ -40,6 +41,12 @@
         [self.view addSubview:star];
         self.stars[i] = star;
     }
+    
+    FAImageView *imageView = [[FAImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 100.f)];
+    imageView.image = nil;    
+
+    
+    [self.view addSubview:imageView];
 }
 
 - (void)didSelectStar:(id)sender

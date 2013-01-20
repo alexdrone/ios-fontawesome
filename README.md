@@ -25,6 +25,15 @@ or you can reference them by using the class identifiers listed here http://fort
 That's it!
 For further information have a look to the small demo project!
 
+FAImageView
+--------------------
+
+FAImageView is now extended and contains a new property called `defaultView` that is shown when the image is set to nil.
+It is possible to use one the font-awesome icon as a default placeholder for an image view.
+
+	FAImageView *imageView = [[FAImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 100.f)];
+    imageView.image = nil;
+    [imageView setDefaultIconIdentifier:@"icon-github"];
 
 License
 -------------------
