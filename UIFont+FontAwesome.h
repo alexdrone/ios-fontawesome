@@ -27,11 +27,6 @@
 @interface UIFont (FontAwesome)
 
 /**
- @abstract Returns the FontAwesome iconic font 
- */
-+ (UIFont*)iconicFontOfSize:(CGFloat)size __deprecated;
-
-/**
  @abstract Returns the FontAwesome iconic font.
  */
 + (UIFont*)fontAwesomeFontOfSize:(CGFloat)size;
