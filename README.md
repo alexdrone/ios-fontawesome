@@ -16,12 +16,12 @@ Then add the `NSString+FontAwesome` category to the project.
 	
 You can now use enums for all the different iconic characters
 
-	label.text = [NSString fontAwesomeIconStringForEnum:FAIconGithub];
 	
+	label.text = [NSString fontAwesomeIconStringForEnum:FAGithub];
 or you can reference them by using the class identifiers listed here http://fortawesome.github.com/Font-Awesome/#all-icons
 
-	label.text = [NSString fontAwesomeIconStringForIconIdentifier:@"icon-github"];
 	
+	label.text = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-github"];
 That's it!
 For further information have a look to the small demo project!
 
@@ -33,7 +33,7 @@ It is possible to use one the font-awesome icon as a default placeholder for an 
 
 	FAImageView *imageView = [[FAImageView alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 100.f)];
     imageView.image = nil;
-    [imageView setDefaultIconIdentifier:@"icon-github"];
+    [imageView setDefaultIconIdentifier:@"fa-github"];
 
 License
 -------------------
