@@ -12,10 +12,6 @@
 @implementation UIFont (FontAwesome)
 
 #pragma mark - Public API
-+ (UIFont *)iconicFontOfSize:(CGFloat)size {
-    return [UIFont fontAwesomeFontOfSize:size];
-}
-
 + (UIFont*)fontAwesomeFontOfSize:(CGFloat)size {
     return [UIFont fontWithName:kFontAwesomeFamilyName size:size];
 }
