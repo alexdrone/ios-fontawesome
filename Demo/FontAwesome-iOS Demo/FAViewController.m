@@ -34,8 +34,8 @@
         star.frame = CGRectMake(60.f+(i *40.f), 200.f, 40.f, 40.f);
         star.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:35];
         star.titleLabel.shadowOffset = CGSizeMake(0, -1);
-        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAIconStarEmpty] forState:UIControlStateNormal];
-        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAIconStar] forState:UIControlStateSelected];
+        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAStarO] forState:UIControlStateNormal];
+        [star setTitle:[NSString fontAwesomeIconStringForEnum:FAStar] forState:UIControlStateSelected];
         [star setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         [star addTarget:self action:@selector(didSelectStar:) forControlEvents:UIControlEventTouchDown];
         [self.view addSubview:star];
