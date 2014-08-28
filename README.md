@@ -22,6 +22,13 @@ or you can reference them by using the class identifiers listed here http://fort
 
 	
 	label.text = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-github"];
+or you can add the `UIImage+FontAwesome` category to generate icon image directly
+
+	UIImage *github = [UIImage imageWithIcon:@"fa-github" backgroundColor:[UIColor purpleColor] iconColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:255] iconScale:2.f fontSize:20];
+then you will get an icon like this
+
+![image](Resources/fontawesome-github.png)
+
 That's it!
 For further information have a look to the small demo project!
 

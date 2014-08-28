@@ -10,6 +10,7 @@
 #import "FATableViewController.h"
 #import "NSString+FontAwesome.h"
 #import "FATableViewCell.h"
+#import "UIImage+FontAwesome.h"
 
 @interface FATableViewController ()
 
@@ -47,11 +48,19 @@
     self.searchDisplayController.searchResultsDataSource = self;
     self.searchDisplayController.searchResultsDelegate = self;
     
-    [self.navigationController.navigationBar setTintColor:[UIColor orangeColor]];
+    [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
 	
 	[self.tableView registerClass:[FATableViewCell class] forCellReuseIdentifier:@"Cell"];
 
-	[self.navigationItem setTitle:[NSString stringWithFormat:@"%d Font Awesome icons", [self.iconIdentiferArray count]]];
+	[self.navigationItem setTitle:[NSString stringWithFormat:@"%lu Font Awesome icons", (unsigned long)[self.iconIdentiferArray count]]];
+    
+    UIImage *icon = [UIImage imageWithIcon:@"fa-bars" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:[[UIScreen mainScreen] scale] andSize:CGSizeMake(26, 26)];
+    UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithImage:icon style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setLeftBarButtonItem:leftBarButton];
+    
+    icon = [UIImage imageWithIcon:@"fa-cog" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:[[UIScreen mainScreen] scale] andSize:CGSizeMake(26, 26)];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:icon style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setRightBarButtonItem:rightBarButton];
 }
 
 - (void)didReceiveMemoryWarning
