@@ -639,6 +639,51 @@
         tmp[@"fa-weixin"]             = @(FAweixin);
         tmp[@"fa-wordpress"]          = @(FAwordpress);
         tmp[@"fa-yahoo"]              = @(FAyahoo);
+        
+        /* FontAwesome ver 4.2.0 */
+        tmp[@"fa-angellist"]          = @(FAangellist);
+        tmp[@"fa-area-chart"]         = @(FAareaChart);
+        tmp[@"fa-at"]                 = @(FAat);
+        tmp[@"fa-bell-slash"]         = @(FAbellSlash);
+        tmp[@"fa-bell-slash-o"]       = @(FAbellSlashO);
+        tmp[@"fa-bicycle"]            = @(FAbicycle);
+        tmp[@"fa-binoculars"]         = @(FAbinoculars);
+        tmp[@"fa-birthday-cake"]      = @(FAbirthdayCake);
+        tmp[@"fa-bus"]                = @(FAbus);
+        tmp[@"fa-calculator"]         = @(FAcalculator);
+        tmp[@"fa-cc"]                 = @(FAcc);
+        tmp[@"fa-cc-amex"]            = @(FAccAmex);
+        tmp[@"fa-cc-discover"]        = @(FAccDiscover);
+        tmp[@"fa-cc-mastercard"]      = @(FAccMastercard);
+        tmp[@"fa-cc-paypal"]          = @(FAccPaypal);
+        tmp[@"fa-cc-stripe"]          = @(FAccStripe);
+        tmp[@"fa-cc-visa"]            = @(FAccVisa);
+        tmp[@"fa-copyright"]          = @(FAcopyright);
+        tmp[@"fa-eyedropper"]         = @(FAeyedropper);
+        tmp[@"fa-futbol-o"]           = @(FAfutbolO);
+        tmp[@"fa-google-wallet"]      = @(FAgoogleWallet);
+        tmp[@"fa-ils"]                = @(FAils);
+        tmp[@"fa-ioxhost"]            = @(FAioxhost);
+        tmp[@"fa-lastfm"]             = @(FAlastfm);
+        tmp[@"fa-lastfm-square"]      = @(FAlastfmSquare);
+        tmp[@"fa-line-chart"]         = @(FAlineChart);
+        tmp[@"fa-meanpath"]           = @(FAmeanpath);
+        tmp[@"fa-newspaper-o"]        = @(FAnewspaperO);
+        tmp[@"fa-paint-brush"]        = @(FApaintBrush);
+        tmp[@"fa-paypal"]             = @(FApaypal);
+        tmp[@"fa-pie-chart"]          = @(FApieChart);
+        tmp[@"fa-plug"]               = @(FAplug);
+        tmp[@"fa-shekel"]             = @(FAshekel);
+        tmp[@"fa-sheqel"]             = @(FAsheqel);
+        tmp[@"fa-slideshare"]         = @(FAslideshare);
+        tmp[@"fa-soccer-ball-o"]      = @(FAsoccerBallO);
+        tmp[@"fa-toggle-off"]         = @(FAtoggleOff);
+        tmp[@"fa-toggle-on"]          = @(FAtoggleOn);
+        tmp[@"fa-trash"]              = @(FAtrash);
+        tmp[@"fa-tty"]                = @(FAtty);
+        tmp[@"fa-twitch"]             = @(FAtwitch);
+        tmp[@"fa-wifi"]               = @(FAwifi);
+        tmp[@"fa-yelp"]               = @(FAyelp);
 
         icons = [NSDictionary dictionaryWithDictionary:tmp];
 	}
