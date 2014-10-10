@@ -9,7 +9,7 @@
 #import "UIImage+FontAwesome.h"
 #import "NSString+FontAwesome.h"
 
-int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minFontSize)
+int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minFontSize)
 {
     // Set the frame of the label to the targeted rectangle
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
@@ -73,7 +73,7 @@ int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minF
         UILabel *label = [UILabel new];
         label.font = font;
         label.text = textContent;
-        fontSize = constraintLabelToSize(label, size, 500, 5);
+        fontSize = fa_constraintLabelToSize(label, size, 500, 5);
         font = label.font;
     }
     [iconColor setFill];
