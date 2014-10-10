@@ -45,7 +45,7 @@ int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minF
 
 @implementation UIImage (UIImage_FontAwesome)
 
-+(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor iconScale:(CGFloat)scale andSize:(CGSize)size{
++(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor andSize:(CGSize)size{
     if (!bgColor) {
         bgColor = [UIColor clearColor];
     }
@@ -53,11 +53,7 @@ int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minF
         iconColor = [UIColor whiteColor];
     }
     
-    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-        UIGraphicsBeginImageContextWithOptions(size, NO, scale);
-    } else {
-        UIGraphicsBeginImageContext(size);
-    }
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
     
     //// Abstracted Attributes
     NSString* textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
@@ -93,7 +89,7 @@ int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minF
     return image;
 }
 
-+(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor iconScale:(CGFloat)scale fontSize:(int)fontSize
++(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor  fontSize:(int)fontSize
 {
     if (!bgColor) {
         bgColor = [UIColor clearColor];
@@ -119,12 +115,8 @@ int constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int minF
     
     CGPoint origin = CGPointMake(size.width * 0.05, size.height * 0.025);
     
-    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-        UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
-    } else {
-        UIGraphicsBeginImageContext(size);
-    }
-    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
+
     //// Rectangle Drawing
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:textRect];
     [bgColor setFill];

@@ -32,16 +32,14 @@
     imageView.image = nil;
     [self.view addSubview:imageView];
     
-    CGFloat scale = [[UIScreen mainScreen] scale];
-    
-    UIImage *icon = [UIImage imageWithIcon:@"fa-github" backgroundColor:[UIColor purpleColor] iconColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:255] iconScale:scale fontSize:50];
+    UIImage *icon = [UIImage imageWithIcon:@"fa-github" backgroundColor:[UIColor purpleColor] iconColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:255] fontSize:50];
     UIImageView *github = [[UIImageView alloc] initWithImage:icon];
     CGRect rect = github.frame;
     rect.origin.y += CGRectGetMaxY(imageView.frame);
     github.frame = rect;
     [self.view addSubview:github];
     
-    icon = [UIImage imageWithIcon:@"fa-bitbucket" backgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:255] iconColor:[UIColor whiteColor] iconScale:scale fontSize:100];
+    icon = [UIImage imageWithIcon:@"fa-bitbucket" backgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:255] iconColor:[UIColor whiteColor] fontSize:100];
     UIImageView *bitbucket = [[UIImageView alloc] initWithImage:icon];
     rect = bitbucket.frame;
     rect.origin.y += CGRectGetMaxY(github.frame);

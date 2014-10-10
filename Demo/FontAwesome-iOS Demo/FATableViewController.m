@@ -54,11 +54,11 @@
 
 	[self.navigationItem setTitle:[NSString stringWithFormat:@"%lu Font Awesome icons", (unsigned long)[self.iconIdentiferArray count]]];
     
-    UIImage *icon = [UIImage imageWithIcon:@"fa-bars" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:[[UIScreen mainScreen] scale] andSize:CGSizeMake(26, 26)];
+    UIImage *icon = [UIImage imageWithIcon:@"fa-bars" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] andSize:CGSizeMake(26, 26)];
     UIBarButtonItem *leftBarButton = [[UIBarButtonItem alloc] initWithImage:icon style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setLeftBarButtonItem:leftBarButton];
     
-    icon = [UIImage imageWithIcon:@"fa-cog" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] iconScale:[[UIScreen mainScreen] scale] andSize:CGSizeMake(26, 26)];
+    icon = [UIImage imageWithIcon:@"fa-cog" backgroundColor:[UIColor clearColor] iconColor:[UIColor whiteColor] andSize:CGSizeMake(26, 26)];
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:icon style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setRightBarButtonItem:rightBarButton];
 }

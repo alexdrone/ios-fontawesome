@@ -20,7 +20,7 @@
  *
  *	@return	Image to be used wherever you want
  */
-+(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor iconScale:(CGFloat)scale andSize:(CGSize)size;
++(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor andSize:(CGSize)size;
 /**
  *	This method generates an UIImage with a given FontAwesomeIcon and format parameters
  *
@@ -32,5 +32,5 @@
  *
  *	@return	Image to be used wherever you want
  */
-+(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor iconScale:(CGFloat)scale fontSize:(int)fontSize;
++(UIImage*)imageWithIcon:(NSString*)identifier backgroundColor:(UIColor*)bgColor iconColor:(UIColor*)iconColor fontSize:(int)fontSize;
 @end
