@@ -29,8 +29,8 @@ then you will get an icon like this
 
 ![image](Resources/fontawesome-github.png)
 
-That's it!
-For further information have a look to the small demo project!
+That's all.  
+Have a look at the small demo project for further information.
 
 FAImageView
 --------------------
