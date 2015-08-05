@@ -78,9 +78,12 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     }
     [iconColor setFill];
     
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    style.alignment = NSTextAlignmentCenter;
     [textContent drawInRect:textRect withAttributes:@{NSFontAttributeName : font,
                                                       NSForegroundColorAttributeName : iconColor,
-                                                      NSBackgroundColorAttributeName : bgColor
+                                                      NSBackgroundColorAttributeName : bgColor,
+                                                      NSParagraphStyleAttributeName: style,
                                                       }];
 
     //Image returns
@@ -101,9 +104,12 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     //// Abstracted Attributes
     NSString* textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
     UIFont *font = [UIFont fontWithName:kFontAwesomeFamilyName size:fontSize];
+    NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    style.alignment = NSTextAlignmentCenter;
     NSDictionary *attributes = @{NSFontAttributeName : font,
                                  NSForegroundColorAttributeName : iconColor,
                                  NSBackgroundColorAttributeName : bgColor,
+                                 NSParagraphStyleAttributeName: style,
                                  };
     
     //// Content Edge Insets
