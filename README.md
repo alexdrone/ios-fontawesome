@@ -18,7 +18,7 @@ You can now use enums for all the different iconic characters
 
 	
 	label.text = [NSString fontAwesomeIconStringForEnum:FAGithub];
-or you can reference them by using the class identifiers listed here http://fortawesome.github.com/Font-Awesome/#all-icons
+or you can reference them by using the class identifiers listed here http://fortawesome.github.io/Font-Awesome/icons
 
 	
 	label.text = [NSString fontAwesomeIconStringForIconIdentifier:@"fa-github"];
@@ -27,7 +27,7 @@ or you can add the `UIImage+FontAwesome` category to generate icon image directl
 	UIImage *github = [UIImage imageWithIcon:@"fa-github" backgroundColor:[UIColor purpleColor] iconColor:[UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:255] iconScale:2.f fontSize:20];
 then you will get an icon like this
 
-![image](Resources/fontawesome-github.png)
+![image](Resources/fontawesome-github.jpg)
 
 That's all.  
 Have a look at the small demo project for further information.

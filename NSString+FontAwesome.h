@@ -577,7 +577,75 @@ typedef NS_ENUM(NSInteger, FAIcon) {
     FAvenus,
     FAvenusDouble,
     FAvenusMars,
-    FAviacoin
+    FAviacoin,
+    
+    /* FontAwesome ver 4.4.0 */
+    FA500px,
+    FAamazon,
+    FAbalanceScale,
+    FAbatteryEmpty,
+    FAbatteryFull,
+    FAbatteryHalf,
+    FAbatteryQuarter,
+    FAbatteryThreeQuarters,
+    FAblackTie,
+    FAcalendarCheckO,
+    FAcalendarMinusO,
+    FAcalendarPlusO,
+    FAcalendarTimesO,
+    FAccDinersClub,
+    FAccJcb,
+    FAchrome,
+    FAclone,
+    FAcommenting,
+    FAcommentingO,
+    FAcontao,
+    FAcreativeCommons,
+    FAexpeditedssl,
+    FAfirefox,
+    FAfonticons,
+    FAgenderless,
+    FAgetPocket,
+    FAgg,
+    FAggCircle,
+    FAhandLizardO,
+    FAhandPaperO,
+    FAhandPeaceO,
+    FAhandPointerO,
+    FAhandRockO,
+    FAhandScissorsO,
+    FAhandSpockO,
+    FAhourglass,
+    FAhourglassEnd,
+    FAhourglassHalf,
+    FAhourglassO,
+    FAhourglassStart,
+    FAhouzz,
+    FAiCursor,
+    FAindustry,
+    FAinternetExplorer,
+    FAmap,
+    FAmapO,
+    FAmapPin,
+    FAmapSigns,
+    FAmousePointer,
+    FAobjectGroup,
+    FAobjectUngroup,
+    FAodnoklassniki,
+    FAodnoklassnikiSquare,
+    FAopencart,
+    FAopera,
+    FAoptinMonster,
+    FAregistered,
+    FAsafari,
+    FAstickyNote,
+    FAstickyNoteO,
+    FAtelevision,
+    FAtrademark,
+    FAtripadvisor,
+    FAvimeo,
+    FAwikipediaW,
+    FAyCombinator
 };
 
 
@@ -586,7 +654,7 @@ typedef NS_ENUM(NSInteger, FAIcon) {
 
 /**
  @abstract Returns the correct enum for a font-awesome icon.
- @discussion The list of identifiers can be found here: http://fortawesome.github.com/Font-Awesome/#all-icons
+ @discussion The list of identifiers can be found here: http://fortawesome.github.io/Font-Awesome/icons
  */
 + (FAIcon)fontAwesomeEnumForIconIdentifier:(NSString*)string;
 
@@ -597,7 +665,7 @@ typedef NS_ENUM(NSInteger, FAIcon) {
 
 /* 
  @abstract Returns the font-awesome character associated to the font-awesome identifier.
- @discussion The list of identifiers can be found here: http://fortawesome.github.com/Font-Awesome/#all-icons
+ @discussion The list of identifiers can be found here: http://fortawesome.github.io/Font-Awesome/icons
  */
 + (NSString*)fontAwesomeIconStringForIconIdentifier:(NSString*)identifier;
 
