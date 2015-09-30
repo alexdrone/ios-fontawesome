@@ -56,7 +56,10 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
     
     //// Abstracted Attributes
-    NSString* textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
+    NSString* textContent = identifier;
+    if (identifier.length > 3 && [[identifier substringToIndex:2] isEqualToString:@"fa-"]) {
+        textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
+    }
     
     CGRect textRect = CGRectZero;
     textRect.size = size;
@@ -102,7 +105,11 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     }
     
     //// Abstracted Attributes
-    NSString* textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
+    NSString* textContent = identifier;
+    if (identifier.length > 3 && [[identifier substringToIndex:2] isEqualToString:@"fa-"]) {
+        textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
+    }
+    
     UIFont *font = [UIFont fontWithName:kFontAwesomeFamilyName size:fontSize];
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     style.alignment = NSTextAlignmentCenter;
