@@ -57,7 +57,7 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     
     //// Abstracted Attributes
     NSString* textContent = identifier;
-    if (identifier.length > 3 && [[identifier substringToIndex:2] isEqualToString:@"fa-"]) {
+    if (identifier.length > 3 && [[identifier substringToIndex:3] isEqualToString:@"fa-"]) {
         textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
     }
     
@@ -106,7 +106,7 @@ int fa_constraintLabelToSize(UILabel *label, CGSize size, int maxFontSize, int m
     
     //// Abstracted Attributes
     NSString* textContent = identifier;
-    if (identifier.length > 3 && [[identifier substringToIndex:2] isEqualToString:@"fa-"]) {
+    if (identifier.length > 3 && [[identifier substringToIndex:3] isEqualToString:@"fa-"]) {
         textContent = [NSString fontAwesomeIconStringForIconIdentifier:identifier];
     }
     
